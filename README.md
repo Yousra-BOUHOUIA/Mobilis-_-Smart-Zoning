@@ -263,6 +263,6 @@ For any questions or suggestions, please reach out to the project team:
 | **Role**       | **Name**       | **Email**               |  
 |----------------|---------------|-------------------------|  
 | Team Lead      |Bentayeb Manar    | manar.bentayeb@ensia.edu.dz  |  
-| Contributor    | Hiba AYADI | hiba.ayadi@ensia.edu.dz|  
 | Contributor    | Yousra BOUHOUIA | yousra.bouhouia@ensia.edu.dz|  
+| Contributor    | Hiba AYADI | hiba.ayadi@ensia.edu.dz|  
 | Contributor    | Lydia BENHAMOUCHE | lydia.benhamouche@ensia.edu.dz| 
