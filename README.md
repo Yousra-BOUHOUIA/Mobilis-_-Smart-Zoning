@@ -1,7 +1,7 @@
 # Smart-Zoning Project For mobilis Company 
 
 
-![Project Status](https://img.shields.io/badge/Status-In%20Development-yellow)  
+![Project Status](https://img.shields.io/badge/Status-In%20Developmed-yellow)  
 ![License](https://img.shields.io/badge/License-Educational-blue)  
 ![Contributors](https://img.shields.io/badge/Contributors-4-brightgreen)  
 Smart Zoning System for Mobilis - Web and Mobile Applications for PDV Zone Management
