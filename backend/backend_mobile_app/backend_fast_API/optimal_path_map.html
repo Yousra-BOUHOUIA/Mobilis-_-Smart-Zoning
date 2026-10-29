@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3c6fbed4a0ced0d1f6d4e9ec16ed420e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; bottom: 50px; left: 50px; z-index: 1000; background-color: white; padding: 10px; border: 2px solid grey; border-radius: 5px;">
+        <p><strong>Legend:</strong></p>
+        <p><span style="color: red;">●</span> Start Point</p>
+        <p><span style="color: blue;">●</span> PDV Points</p>
+        <p><span style="color: blue;">━</span> Optimal Path</p>
+        <p>Total Distance: 2372.02 km</p>
+    </div>
+    
+    
+            <div class="folium-map" id="map_3c6fbed4a0ced0d1f6d4e9ec16ed420e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3c6fbed4a0ced0d1f6d4e9ec16ed420e = L.map(
+                "map_3c6fbed4a0ced0d1f6d4e9ec16ed420e",
+                {
+                    center: [36.7922, 3.0118],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_66709a9e1317328076020afebc3f86e9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_66709a9e1317328076020afebc3f86e9.addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var marker_0055afd531c557eb444c1032677622f4 = L.marker(
+                [36.7922, 3.0118],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_ba1aa5821b46ecd610a73d393679263d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f89af7c998a2e92f81c8fc7aa33c55c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a0db65283e75ab7bec1754c26e2009cf = $(`<div id="html_a0db65283e75ab7bec1754c26e2009cf" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv1</b><br>         Commune: Bouzareah<br>         Daira: Bouzareah<br>         Wilaya: Alger<br>         Visit Order: 1         </div>`)[0];
+                popup_2f89af7c998a2e92f81c8fc7aa33c55c.setContent(html_a0db65283e75ab7bec1754c26e2009cf);
+            
+        
+
+        marker_0055afd531c557eb444c1032677622f4.bindPopup(popup_2f89af7c998a2e92f81c8fc7aa33c55c)
+        ;
+
+        
+    
+    
+                marker_0055afd531c557eb444c1032677622f4.setIcon(icon_ba1aa5821b46ecd610a73d393679263d);
+            
+    
+            var marker_7fb564ce2b797c65a4276667b5d7e20a = L.marker(
+                [36.7583, 3.0517],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_a491ba5dd90598d03c9b31d947855714 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad0a2bcdc6324259ab836eedc44216c7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0092c1396df0fb86e0841c24f65f29b2 = $(`<div id="html_0092c1396df0fb86e0841c24f65f29b2" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv3</b><br>         Commune: Sidi M'Hamed<br>         Daira: Sidi M'Hamed<br>         Wilaya: Alger<br>         Visit Order: 2         </div>`)[0];
+                popup_ad0a2bcdc6324259ab836eedc44216c7.setContent(html_0092c1396df0fb86e0841c24f65f29b2);
+            
+        
+
+        marker_7fb564ce2b797c65a4276667b5d7e20a.bindPopup(popup_ad0a2bcdc6324259ab836eedc44216c7)
+        ;
+
+        
+    
+    
+                marker_7fb564ce2b797c65a4276667b5d7e20a.setIcon(icon_a491ba5dd90598d03c9b31d947855714);
+            
+    
+            var marker_66231c0967f07a47f9fede9f2e1a255f = L.marker(
+                [36.7414, 3.0945],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_d59429975a90631b10fb94d48800fe2d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_19e786fb9ad0354a6857e8ec25eaf3f0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_543a7d42eaa82831ff84b7509950ced4 = $(`<div id="html_543a7d42eaa82831ff84b7509950ced4" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv2</b><br>         Commune: Hussein Dey<br>         Daira: Hussein Dey<br>         Wilaya: Alger<br>         Visit Order: 3         </div>`)[0];
+                popup_19e786fb9ad0354a6857e8ec25eaf3f0.setContent(html_543a7d42eaa82831ff84b7509950ced4);
+            
+        
+
+        marker_66231c0967f07a47f9fede9f2e1a255f.bindPopup(popup_19e786fb9ad0354a6857e8ec25eaf3f0)
+        ;
+
+        
+    
+    
+                marker_66231c0967f07a47f9fede9f2e1a255f.setIcon(icon_d59429975a90631b10fb94d48800fe2d);
+            
+    
+            var marker_64fd92da380f22168d0046cafc540772 = L.marker(
+                [36.7161, 3.1833],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_173c9e447e46c6ea8f1c276d516b607d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f843e719a8a4f0a125c859ff2bc7ef91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2b71a67812f791a59e5cd828ed984a8e = $(`<div id="html_2b71a67812f791a59e5cd828ed984a8e" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv4</b><br>         Commune: Bab Ezzouar<br>         Daira: Dar El Beïda<br>         Wilaya: Alger<br>         Visit Order: 4         </div>`)[0];
+                popup_f843e719a8a4f0a125c859ff2bc7ef91.setContent(html_2b71a67812f791a59e5cd828ed984a8e);
+            
+        
+
+        marker_64fd92da380f22168d0046cafc540772.bindPopup(popup_f843e719a8a4f0a125c859ff2bc7ef91)
+        ;
+
+        
+    
+    
+                marker_64fd92da380f22168d0046cafc540772.setIcon(icon_173c9e447e46c6ea8f1c276d516b607d);
+            
+    
+            var marker_9175b67d0248296a3b8bbc9afa3c74be = L.marker(
+                [36.7486, 3.1922],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_f650667329aeb667ff6559bbc8573961 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e309cfc794730c59573f19deb6c6d8a5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7b24cd8cb075df30c10d621db95d6290 = $(`<div id="html_7b24cd8cb075df30c10d621db95d6290" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv5</b><br>         Commune: Bordj El Kiffan<br>         Daira: Bordj El Kiffan<br>         Wilaya: Alger<br>         Visit Order: 5         </div>`)[0];
+                popup_e309cfc794730c59573f19deb6c6d8a5.setContent(html_7b24cd8cb075df30c10d621db95d6290);
+            
+        
+
+        marker_9175b67d0248296a3b8bbc9afa3c74be.bindPopup(popup_e309cfc794730c59573f19deb6c6d8a5)
+        ;
+
+        
+    
+    
+                marker_9175b67d0248296a3b8bbc9afa3c74be.setIcon(icon_f650667329aeb667ff6559bbc8573961);
+            
+    
+            var marker_41232787fbcc78f5669cf7e975418850 = L.marker(
+                [36.7167, 4.05],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_6b6146967f5af6ea15d3cb38d0743f54 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91b3d4279730c7c7b6e2405a105abb50 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e4cc1f116238162b5aa8209cba06463f = $(`<div id="html_e4cc1f116238162b5aa8209cba06463f" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv14</b><br>         Commune: Tizi Ouzou<br>         Daira: Tizi Ouzou<br>         Wilaya: Tizi Ouzou<br>         Visit Order: 6         </div>`)[0];
+                popup_91b3d4279730c7c7b6e2405a105abb50.setContent(html_e4cc1f116238162b5aa8209cba06463f);
+            
+        
+
+        marker_41232787fbcc78f5669cf7e975418850.bindPopup(popup_91b3d4279730c7c7b6e2405a105abb50)
+        ;
+
+        
+    
+    
+                marker_41232787fbcc78f5669cf7e975418850.setIcon(icon_6b6146967f5af6ea15d3cb38d0743f54);
+            
+    
+            var marker_5892700b663da863fbf4989e85cc91d6 = L.marker(
+                [36.7509, 5.0567],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_fd0db81fdb3c6429949f5cfcb357095e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eacf44eb5de683c4f29d69a9bbceebfc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ecbf954554a7b9dbce39968a1a6d3ee0 = $(`<div id="html_ecbf954554a7b9dbce39968a1a6d3ee0" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv12</b><br>         Commune: Béjaïa<br>         Daira: Béjaïa<br>         Wilaya: Béjaïa<br>         Visit Order: 7         </div>`)[0];
+                popup_eacf44eb5de683c4f29d69a9bbceebfc.setContent(html_ecbf954554a7b9dbce39968a1a6d3ee0);
+            
+        
+
+        marker_5892700b663da863fbf4989e85cc91d6.bindPopup(popup_eacf44eb5de683c4f29d69a9bbceebfc)
+        ;
+
+        
+    
+    
+                marker_5892700b663da863fbf4989e85cc91d6.setIcon(icon_fd0db81fdb3c6429949f5cfcb357095e);
+            
+    
+            var marker_024481b3eb4ffbb9ea41ce624cf7709a = L.marker(
+                [36.9009, 7.7567],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_a277d223240ff71b200247bcbd04d572 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31b8a38751326114f5f5f9c426fee2d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d1037a46acd3ea3596d58e6720262aed = $(`<div id="html_d1037a46acd3ea3596d58e6720262aed" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv10</b><br>         Commune: Annaba<br>         Daira: Annaba<br>         Wilaya: Annaba<br>         Visit Order: 8         </div>`)[0];
+                popup_31b8a38751326114f5f5f9c426fee2d1.setContent(html_d1037a46acd3ea3596d58e6720262aed);
+            
+        
+
+        marker_024481b3eb4ffbb9ea41ce624cf7709a.bindPopup(popup_31b8a38751326114f5f5f9c426fee2d1)
+        ;
+
+        
+    
+    
+                marker_024481b3eb4ffbb9ea41ce624cf7709a.setIcon(icon_a277d223240ff71b200247bcbd04d572);
+            
+    
+            var marker_832c457518db20f98bf84d31a133bada = L.marker(
+                [36.365, 6.6147],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_4f1a1b19ac42ef6b84f9817da46d9ff6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b87251c38d10635d8d4add5e4ffdc78 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7f52cca1c2b0f8c33c3d88b24eea8bbb = $(`<div id="html_7f52cca1c2b0f8c33c3d88b24eea8bbb" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv9</b><br>         Commune: Constantine<br>         Daira: Constantine<br>         Wilaya: Constantine<br>         Visit Order: 9         </div>`)[0];
+                popup_5b87251c38d10635d8d4add5e4ffdc78.setContent(html_7f52cca1c2b0f8c33c3d88b24eea8bbb);
+            
+        
+
+        marker_832c457518db20f98bf84d31a133bada.bindPopup(popup_5b87251c38d10635d8d4add5e4ffdc78)
+        ;
+
+        
+    
+    
+                marker_832c457518db20f98bf84d31a133bada.setIcon(icon_4f1a1b19ac42ef6b84f9817da46d9ff6);
+            
+    
+            var marker_b6cf7e870fa91c19ba14677b300bac9d = L.marker(
+                [35.5559, 6.1741],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_fae2cb2cc3197f7b08323621a2669ba1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_962488a1d5848a5b06bc073b991e3e52 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b3d9dde97320608cd6cc906fecd0c865 = $(`<div id="html_b3d9dde97320608cd6cc906fecd0c865" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv11</b><br>         Commune: Batna<br>         Daira: Batna<br>         Wilaya: Batna<br>         Visit Order: 10         </div>`)[0];
+                popup_962488a1d5848a5b06bc073b991e3e52.setContent(html_b3d9dde97320608cd6cc906fecd0c865);
+            
+        
+
+        marker_b6cf7e870fa91c19ba14677b300bac9d.bindPopup(popup_962488a1d5848a5b06bc073b991e3e52)
+        ;
+
+        
+    
+    
+                marker_b6cf7e870fa91c19ba14677b300bac9d.setIcon(icon_fae2cb2cc3197f7b08323621a2669ba1);
+            
+    
+            var marker_cd2106ba525c8acaf332171a25e6b569 = L.marker(
+                [34.6667, 3.25],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_69452c3c5eaa4702a85b94bd56b8d481 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c48e9cf06041aeef8f00b7ce3454806d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_17412c70495e34d5dd85d4f026cf2273 = $(`<div id="html_17412c70495e34d5dd85d4f026cf2273" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv15</b><br>         Commune: Djelfa<br>         Daira: Djelfa<br>         Wilaya: Djelfa<br>         Visit Order: 11         </div>`)[0];
+                popup_c48e9cf06041aeef8f00b7ce3454806d.setContent(html_17412c70495e34d5dd85d4f026cf2273);
+            
+        
+
+        marker_cd2106ba525c8acaf332171a25e6b569.bindPopup(popup_c48e9cf06041aeef8f00b7ce3454806d)
+        ;
+
+        
+    
+    
+                marker_cd2106ba525c8acaf332171a25e6b569.setIcon(icon_69452c3c5eaa4702a85b94bd56b8d481);
+            
+    
+            var marker_08abf2d475b07e874839a7024dd9864d = L.marker(
+                [35.6971, -0.6337],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_f45c6ef35158cdfbf11c4c30406eddfd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a10d86c88e41b58896d7dc7bf36fe7e5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cfb15e07086709f0ed630a5d14abd031 = $(`<div id="html_cfb15e07086709f0ed630a5d14abd031" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv6</b><br>         Commune: Oran<br>         Daira: Oran<br>         Wilaya: Oran<br>         Visit Order: 12         </div>`)[0];
+                popup_a10d86c88e41b58896d7dc7bf36fe7e5.setContent(html_cfb15e07086709f0ed630a5d14abd031);
+            
+        
+
+        marker_08abf2d475b07e874839a7024dd9864d.bindPopup(popup_a10d86c88e41b58896d7dc7bf36fe7e5)
+        ;
+
+        
+    
+    
+                marker_08abf2d475b07e874839a7024dd9864d.setIcon(icon_f45c6ef35158cdfbf11c4c30406eddfd);
+            
+    
+            var marker_9853240ce461f8569a5ffe3e947c67f3 = L.marker(
+                [35.1999, -0.6303],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_b5ed81b018cb0411dd0642d0e0bf92ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca125c7ff282382d4eb1384a6d541aba = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_776e51bd4dff84fb4f6fa1df127c69de = $(`<div id="html_776e51bd4dff84fb4f6fa1df127c69de" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv7</b><br>         Commune: Sidi Bel Abbès<br>         Daira: Sidi Bel Abbès<br>         Wilaya: Sidi Bel Abbès<br>         Visit Order: 13         </div>`)[0];
+                popup_ca125c7ff282382d4eb1384a6d541aba.setContent(html_776e51bd4dff84fb4f6fa1df127c69de);
+            
+        
+
+        marker_9853240ce461f8569a5ffe3e947c67f3.bindPopup(popup_ca125c7ff282382d4eb1384a6d541aba)
+        ;
+
+        
+    
+    
+                marker_9853240ce461f8569a5ffe3e947c67f3.setIcon(icon_b5ed81b018cb0411dd0642d0e0bf92ca);
+            
+    
+            var marker_416136ffe960b45cee742a867a8d30f9 = L.marker(
+                [34.8828, -1.3167],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_e885f8a332067780dfc6abe05c5fec97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f67c308579b2b033815de2c10d5b55a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_27af97aff6c828b4d0d3c67243372bec = $(`<div id="html_27af97aff6c828b4d0d3c67243372bec" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv8</b><br>         Commune: Tlemcen<br>         Daira: Tlemcen<br>         Wilaya: Tlemcen<br>         Visit Order: 14         </div>`)[0];
+                popup_0f67c308579b2b033815de2c10d5b55a.setContent(html_27af97aff6c828b4d0d3c67243372bec);
+            
+        
+
+        marker_416136ffe960b45cee742a867a8d30f9.bindPopup(popup_0f67c308579b2b033815de2c10d5b55a)
+        ;
+
+        
+    
+    
+                marker_416136ffe960b45cee742a867a8d30f9.setIcon(icon_e885f8a332067780dfc6abe05c5fec97);
+            
+    
+            var marker_1955235f20b42ebb39382e179ae688c6 = L.marker(
+                [37.8828, -3.3167],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_2d23f147ae798e709dd7006c07ce3b8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eebf59b363f24ef40df2d8d1999b0310 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_554dda2b1a888927adf937233c1cc0a3 = $(`<div id="html_554dda2b1a888927adf937233c1cc0a3" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv17</b><br>         Commune: boumerdes<br>         Daira: boumerdes<br>         Wilaya: boumerdes<br>         Visit Order: 15         </div>`)[0];
+                popup_eebf59b363f24ef40df2d8d1999b0310.setContent(html_554dda2b1a888927adf937233c1cc0a3);
+            
+        
+
+        marker_1955235f20b42ebb39382e179ae688c6.bindPopup(popup_eebf59b363f24ef40df2d8d1999b0310)
+        ;
+
+        
+    
+    
+                marker_1955235f20b42ebb39382e179ae688c6.setIcon(icon_2d23f147ae798e709dd7006c07ce3b8c);
+            
+    
+            var marker_2d3b3542c73666826ce9921df8fad391 = L.marker(
+                [37.8828, -3.3167],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_2db0b6091f159a86858705389bc4713a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e1bf217d585a210804b4c87c366baa3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_33057cf6b801b01fe3fd452f49976fea = $(`<div id="html_33057cf6b801b01fe3fd452f49976fea" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv16</b><br>         Commune: boumerdes<br>         Daira: boumerdes<br>         Wilaya: boumerdes<br>         Visit Order: 16         </div>`)[0];
+                popup_4e1bf217d585a210804b4c87c366baa3.setContent(html_33057cf6b801b01fe3fd452f49976fea);
+            
+        
+
+        marker_2d3b3542c73666826ce9921df8fad391.bindPopup(popup_4e1bf217d585a210804b4c87c366baa3)
+        ;
+
+        
+    
+    
+                marker_2d3b3542c73666826ce9921df8fad391.setIcon(icon_2db0b6091f159a86858705389bc4713a);
+            
+    
+            var marker_1a129bab386b06f2b778b97808d47c9b = L.marker(
+                [36.47, 2.8283],
+                {
+}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+            var icon_3f6391727919add77d990efcbf7c0dab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a23a59a9093819c971cd9748912c1fb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_44363bf4133b25c3192de30129611148 = $(`<div id="html_44363bf4133b25c3192de30129611148" style="width: 100.0%; height: 100.0%;">         <b>PDV: pdv13</b><br>         Commune: Blida<br>         Daira: Blida<br>         Wilaya: Blida<br>         Visit Order: 17         </div>`)[0];
+                popup_4a23a59a9093819c971cd9748912c1fb.setContent(html_44363bf4133b25c3192de30129611148);
+            
+        
+
+        marker_1a129bab386b06f2b778b97808d47c9b.bindPopup(popup_4a23a59a9093819c971cd9748912c1fb)
+        ;
+
+        
+    
+    
+                marker_1a129bab386b06f2b778b97808d47c9b.setIcon(icon_3f6391727919add77d990efcbf7c0dab);
+            
+    
+            var poly_line_1a5bee7abf6e5a56acbed4c64fff0511 = L.polyline(
+                [[36.7922, 3.0118], [36.7583, 3.0517], [36.7414, 3.0945], [36.7161, 3.1833], [36.7486, 3.1922], [36.7167, 4.05], [36.7509, 5.0567], [36.9009, 7.7567], [36.365, 6.6147], [35.5559, 6.1741], [34.6667, 3.25], [35.6971, -0.6337], [35.1999, -0.6303], [34.8828, -1.3167], [37.8828, -3.3167], [37.8828, -3.3167], [36.47, 2.8283]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_3c6fbed4a0ced0d1f6d4e9ec16ed420e);
+        
+    
+        var popup_5a3bc4551ed7071d7708dae44e40071f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf97ca9850a5d9da1220ccc441624c85 = $(`<div id="html_bf97ca9850a5d9da1220ccc441624c85" style="width: 100.0%; height: 100.0%;">Total Distance: 2372.02 km</div>`)[0];
+                popup_5a3bc4551ed7071d7708dae44e40071f.setContent(html_bf97ca9850a5d9da1220ccc441624c85);
+            
+        
+
+        poly_line_1a5bee7abf6e5a56acbed4c64fff0511.bindPopup(popup_5a3bc4551ed7071d7708dae44e40071f)
+        ;
+
+        
+    
+</script>
+</html>

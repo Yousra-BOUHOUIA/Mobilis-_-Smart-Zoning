@@ -1,0 +1,175 @@
+{
+    "optimal_path": [
+        {
+            "key": "pdv1",
+            "commune": "Bouzareah",
+            "daira": "Bouzareah",
+            "wilaya": "Alger",
+            "latitude": 36.7922,
+            "longitude": 3.0118,
+            "visit_order": 1,
+            "status": false
+        },
+        {
+            "key": "pdv3",
+            "commune": "Sidi M'Hamed",
+            "daira": "Sidi M'Hamed",
+            "wilaya": "Alger",
+            "latitude": 36.7583,
+            "longitude": 3.0517,
+            "visit_order": 2,
+            "status": false
+        },
+        {
+            "key": "pdv2",
+            "commune": "Hussein Dey",
+            "daira": "Hussein Dey",
+            "wilaya": "Alger",
+            "latitude": 36.7414,
+            "longitude": 3.0945,
+            "visit_order": 3,
+            "status": false
+        },
+        {
+            "key": "pdv4",
+            "commune": "Bab Ezzouar",
+            "daira": "Dar El Beïda",
+            "wilaya": "Alger",
+            "latitude": 36.7161,
+            "longitude": 3.1833,
+            "visit_order": 4,
+            "status": false
+        },
+        {
+            "key": "pdv5",
+            "commune": "Bordj El Kiffan",
+            "daira": "Bordj El Kiffan",
+            "wilaya": "Alger",
+            "latitude": 36.7486,
+            "longitude": 3.1922,
+            "visit_order": 5,
+            "status": false
+        },
+        {
+            "key": "pdv14",
+            "commune": "Tizi Ouzou",
+            "daira": "Tizi Ouzou",
+            "wilaya": "Tizi Ouzou",
+            "latitude": 36.7167,
+            "longitude": 4.05,
+            "visit_order": 6,
+            "status": false
+        },
+        {
+            "key": "pdv12",
+            "commune": "Béjaïa",
+            "daira": "Béjaïa",
+            "wilaya": "Béjaïa",
+            "latitude": 36.7509,
+            "longitude": 5.0567,
+            "visit_order": 7,
+            "status": false
+        },
+        {
+            "key": "pdv10",
+            "commune": "Annaba",
+            "daira": "Annaba",
+            "wilaya": "Annaba",
+            "latitude": 36.9009,
+            "longitude": 7.7567,
+            "visit_order": 8,
+            "status": false
+        },
+        {
+            "key": "pdv9",
+            "commune": "Constantine",
+            "daira": "Constantine",
+            "wilaya": "Constantine",
+            "latitude": 36.365,
+            "longitude": 6.6147,
+            "visit_order": 9,
+            "status": false
+        },
+        {
+            "key": "pdv11",
+            "commune": "Batna",
+            "daira": "Batna",
+            "wilaya": "Batna",
+            "latitude": 35.5559,
+            "longitude": 6.1741,
+            "visit_order": 10,
+            "status": false
+        },
+        {
+            "key": "pdv15",
+            "commune": "Djelfa",
+            "daira": "Djelfa",
+            "wilaya": "Djelfa",
+            "latitude": 34.6667,
+            "longitude": 3.25,
+            "visit_order": 11,
+            "status": false
+        },
+        {
+            "key": "pdv6",
+            "commune": "Oran",
+            "daira": "Oran",
+            "wilaya": "Oran",
+            "latitude": 35.6971,
+            "longitude": -0.6337,
+            "visit_order": 12,
+            "status": false
+        },
+        {
+            "key": "pdv7",
+            "commune": "Sidi Bel Abbès",
+            "daira": "Sidi Bel Abbès",
+            "wilaya": "Sidi Bel Abbès",
+            "latitude": 35.1999,
+            "longitude": -0.6303,
+            "visit_order": 13,
+            "status": false
+        },
+        {
+            "key": "pdv8",
+            "commune": "Tlemcen",
+            "daira": "Tlemcen",
+            "wilaya": "Tlemcen",
+            "latitude": 34.8828,
+            "longitude": -1.3167,
+            "visit_order": 14,
+            "status": false
+        },
+        {
+            "key": "pdv17",
+            "commune": "boumerdes",
+            "daira": "boumerdes",
+            "wilaya": "boumerdes",
+            "latitude": 37.8828,
+            "longitude": -3.3167,
+            "visit_order": 15,
+            "status": false
+        },
+        {
+            "key": "pdv16",
+            "commune": "boumerdes",
+            "daira": "boumerdes",
+            "wilaya": "boumerdes",
+            "latitude": 37.8828,
+            "longitude": -3.3167,
+            "visit_order": 16,
+            "status": false
+        },
+        {
+            "key": "pdv13",
+            "commune": "Blida",
+            "daira": "Blida",
+            "wilaya": "Blida",
+            "latitude": 36.47,
+            "longitude": 2.8283,
+            "visit_order": 17,
+            "status": false
+        }
+    ],
+    "total_distance_meters": 2372023
+}

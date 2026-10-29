@@ -1,0 +1,155 @@
+{
+    "pdv1": {
+      "commune": "Bouzareah",
+      "daira": "Bouzareah",
+      "wilaya": "Alger",
+      "coordinates": {
+        "latitude": 36.7922,
+        "longitude": 3.0118
+      }
+    },
+    "pdv2": {
+      "commune": "Hussein Dey",
+      "daira": "Hussein Dey",
+      "wilaya": "Alger",
+      "coordinates": {
+        "latitude": 36.7414,
+        "longitude": 3.0945
+      }
+    },
+    "pdv3": {
+      "commune": "Sidi M'Hamed",
+      "daira": "Sidi M'Hamed",
+      "wilaya": "Alger",
+      "coordinates": {
+        "latitude": 36.7583,
+        "longitude": 3.0517
+      }
+    },
+    "pdv4": {
+      "commune": "Bab Ezzouar",
+      "daira": "Dar El Beïda",
+      "wilaya": "Alger",
+      "coordinates": {
+        "latitude": 36.7161,
+        "longitude": 3.1833
+      }
+    },
+    "pdv5": {
+      "commune": "Bordj El Kiffan",
+      "daira": "Bordj El Kiffan",
+      "wilaya": "Alger",
+      "coordinates": {
+        "latitude": 36.7486,
+        "longitude": 3.1922
+      }
+    },
+    "pdv6": {
+      "commune": "Oran",
+      "daira": "Oran",
+      "wilaya": "Oran",
+      "coordinates": {
+        "latitude": 35.6971,
+        "longitude": -0.6337
+      }
+    },
+    "pdv7": {
+      "commune": "Sidi Bel Abbès",
+      "daira": "Sidi Bel Abbès",
+      "wilaya": "Sidi Bel Abbès",
+      "coordinates": {
+        "latitude": 35.1999,
+        "longitude": -0.6303
+      }
+    },
+    "pdv8": {
+      "commune": "Tlemcen",
+      "daira": "Tlemcen",
+      "wilaya": "Tlemcen",
+      "coordinates": {
+        "latitude": 34.8828,
+        "longitude": -1.3167
+      }
+    },
+    "pdv9": {
+      "commune": "Constantine",
+      "daira": "Constantine",
+      "wilaya": "Constantine",
+      "coordinates": {
+        "latitude": 36.3650,
+        "longitude": 6.6147
+      }
+    },
+    "pdv10": {
+      "commune": "Annaba",
+      "daira": "Annaba",
+      "wilaya": "Annaba",
+      "coordinates": {
+        "latitude": 36.9009,
+        "longitude": 7.7567
+      }
+    },
+    "pdv11": {
+      "commune": "Batna",
+      "daira": "Batna",
+      "wilaya": "Batna",
+      "coordinates": {
+        "latitude": 35.5559,
+        "longitude": 6.1741
+      }
+    },
+    "pdv12": {
+      "commune": "Béjaïa",
+      "daira": "Béjaïa",
+      "wilaya": "Béjaïa",
+      "coordinates": {
+        "latitude": 36.7509,
+        "longitude": 5.0567
+      }
+    },
+    "pdv13": {
+      "commune": "Blida",
+      "daira": "Blida",
+      "wilaya": "Blida",
+      "coordinates": {
+        "latitude": 36.4700,
+        "longitude": 2.8283
+      }
+    },
+    "pdv14": {
+      "commune": "Tizi Ouzou",
+      "daira": "Tizi Ouzou",
+      "wilaya": "Tizi Ouzou",
+      "coordinates": {
+        "latitude": 36.7167,
+        "longitude": 4.0500
+      }
+    },
+    "pdv15": {
+      "commune": "Djelfa",
+      "daira": "Djelfa",
+      "wilaya": "Djelfa",
+      "coordinates": {
+        "latitude": 34.6667,
+        "longitude": 3.2500
+      }
+    },
+    "pdv16": {
+      "commune": "boumerdes",
+      "daira": "boumerdes",
+      "wilaya": "boumerdes",
+      "coordinates": {
+        "latitude": 37.8828,
+        "longitude": -3.3167
+      }
+    },
+    "pdv17": {
+      "commune": "boumerdes",
+      "daira": "boumerdes",
+      "wilaya": "boumerdes",
+      "coordinates": {
+        "latitude": 37.8828,
+        "longitude": -3.3167
+      }
+    }
+  }

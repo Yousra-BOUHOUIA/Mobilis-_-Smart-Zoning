@@ -1,0 +1,32 @@
+name: myapp
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  fl_chart: ^0.62.0
+  mobile_scanner: ^3.5.6
+  shared_preferences: ^2.2.0
+  http: ^1.1.0
+  intl: ^0.18.1 
+  google_maps_flutter: ^2.12.2
+  webview_flutter: ^4.4.2
+ 
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/assets/profile_picture.jpg
+    - lib/assets/map.png
+    - lib/assets/city_skyline.png
